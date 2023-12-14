@@ -1,0 +1,360 @@
+/* fonts and color */
+:root {
+	/* fonts */
+	--font-family: "Josefin Sans", sans-serif;
+	--second-family: "Montserrat", sans-serif;
+	--third-family: "Poppins", sans-serif;
+	/* color */
+	--bg: #1f2022;
+	--main_color: #eee;
+	--light_text: #fff;
+	--title_text: #00adb5;
+}
+
+/* fonts */
+@font-face {
+	font-family: "Josefin Sans";
+	src: url("../font/JosefinSans-Bold.ttf") format("woff2");
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("../font/Montserrat-ExtraBold.ttf") format("woff2");
+	font-display: swap;
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("../font/Montserrat-SemiBold.ttf") format("woff2");
+	font-display: swap;
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("../font/Poppins-Medium.ttf") format("woff2");
+	font-display: swap;
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("../font/Poppins-Regular.ttf") format("woff2");
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
+.conteiner {
+	max-width: 1382px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+body {
+	background-color: var(--bg);
+	font-family: var(--font-family);
+	font-weight: 400;
+}
+
+.hero {
+	background-image: url(../img/jassie-portret.png);
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	/* min-height: 882px; */
+	height: 100%;
+	min-height: calc(100vh -100px);
+}
+
+.hero__conteiner {
+	height: 100%;
+	min-height: calc(100vh -100px);
+}
+
+.header {
+	padding: 25px 0;
+}
+
+.header__conteiner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav_list {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.nav_link {
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 18px;
+	color: var(--main_color);
+	transition: all 0.2s ease-in-out;
+}
+
+.nav_link:active {
+	color: var(--title_text);
+}
+
+.nav_link:focus {
+	color: var(--title_text);
+	outline: 1px solid var(--title_text);
+	outline-offset: 4px;
+}
+
+.nav_link:hover {
+	color: var(--title_text);
+}
+
+.nav_link-active {
+	color: var(--title_text);
+}
+.btn__burger {
+	display: none;
+}
+
+.btn {
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 18px;
+	color: #000;
+	border-radius: 3px;
+	background: #eee;
+	padding: 16px;
+}
+
+/* grid */
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 20px;
+}
+.hero__left,
+.hero__wright {
+	grid-column: 6 span;
+	padding-bottom: 40px;
+}
+
+.hero__left {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.hero__level {
+	position: relative;
+	font-family: var(--second-family);
+	font-weight: 800;
+	font-size: 24px;
+	line-height: 167%;
+	color: var(--main_color);
+	max-width: 360px;
+	padding-left: 30px;
+	margin-top: 30vh;
+}
+.hero__level::before {
+	content: "";
+	position: absolute;
+	top: 18px;
+	left: 0;
+	width: 20px;
+	height: 3px;
+	background-color: var(--title_text);
+}
+
+.hero__text {
+	max-width: 200px;
+	font-family: var(--second-family);
+	font-weight: 800;
+	font-size: 24px;
+	line-height: 125%;
+	letter-spacing: 0.04em;
+	color: var(--title_text);
+}
+
+.hero__wright {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-top: 150px;
+	padding-left: 42px;
+}
+
+.hero__hello {
+	font-family: var(--third-family);
+	font-weight: 500;
+	font-size: 18px;
+	letter-spacing: 0.04em;
+	color: var(--main_color);
+}
+.hero__hello span {
+	font-family: var(--second-family);
+	font-weight: 800;
+	font-size: 100px;
+	letter-spacing: 0.06em;
+	color: var(--title_text);
+}
+
+.hero__description {
+	font-family: var(--third-family);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 187%;
+	letter-spacing: 0.04em;
+	color: rgba(255, 255, 255, 0.6);
+	max-width: 550px;
+	margin-bottom: 30px;
+}
+
+.swiper_shots__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.swiper_shots__title {
+	margin-right: 20px;
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 24px;
+	color: var(--light_text);
+}
+
+.swiper_shots__all {
+	font-family: var(--second-family);
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 0.04em;
+	color: var(--title_text);
+}
+
+.swiper_shots{
+	overflow: hidden;
+}
+
+.swiper-shots__content {
+	display: flex;
+	/* gap: 20px; */
+	width: calc(100% + 80px);
+	margin-bottom: 20px;
+}
+
+.latest_shots__image {
+	flex-shrink: 0;
+	border-radius: 5px;
+}
+
+.swiper_shots__nav {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.latest-shots__btn {
+	width: 28px;
+	height: 28px;
+}
+
+.latest-shots__btn svg {
+	width: 100%;
+	height: 100%;
+	fill: var(--light_text);
+	object-fit: cover;
+}
+
+/* modal */
+.modal-parent {
+	position: fixed;
+	inset: 0;
+	z-index: 500;
+	display: flex;
+	overflow-y: auto;
+	background-color: rgba(0, 0, 0, 0.8);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal-wrapper {
+	margin: auto;
+	width: 90%;
+	max-width: 500px;
+}
+
+.modal {
+	margin: 30px 0;
+	width: 100%;
+	border-radius: 5px;
+	padding: 40px 20px;
+	background-color: #fff;
+}
+
+.modal__title {
+	margin: 0;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.modal-parent--open {
+	opacity: 1;
+	visibility: visible;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	width: 100%;
+}
+
+.form__field {
+	width: 100%;
+}
+
+.form__text {
+	display: block;
+	margin-bottom: 3px;
+}
+
+
+.form__input {
+	width: 100%;
+	height: 40px;
+	border: 1px solid #000000; /* Цвет и толщина обводки */
+	transition: border-color 0.3s ease; /* Плавность смены цвета обводки */
+	border-radius: 5px;
+}
+
+.form__input:hover,
+.form__input:focus {
+	border-color: var(--title_text); /* Цвет обводки при наведении курсора или фокусе */
+}
+
+.form__btn {
+	width: 100%;
+}
